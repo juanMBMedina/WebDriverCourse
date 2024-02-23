@@ -1,5 +1,8 @@
 package com.juantesting;
 
+import com.juantesting.pages.HomePage;
+import com.juantesting.pages.LoginPage;
+import com.juantesting.pages.SecureAreaPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -19,8 +22,9 @@ public class BaseTest {
     public static void main(String args[]) {
         BaseTest test = new BaseTest();
         test.setUp();
-        test.courseClassMethod();
+        // test.courseClassMethod();
         // test.exerciseMethod();
+        test.loginExercise();
     }
 
     public void setUp() {
@@ -28,7 +32,6 @@ public class BaseTest {
         ChromeOptions co = new ChromeOptions();
         co.setBinary(CHROME_BINARIES_PATH);
         driver = new ChromeDriver(co);
-        driver.manage().window().maximize();
     }
 
     public void courseClassMethod() {
@@ -49,6 +52,16 @@ public class BaseTest {
         driver.findElement(By.linkText("Example 1: Menu Element")).click();
         List<WebElement> listLiInPage = driver.findElements(By.tagName(strTagName));
         System.out.println("You have (" + listLiInPage.size() + ") elements with tag name: " + strTagName);
+    }
+
+    public void loginExercise(){
+        HomePage homePage = new HomePage(driver);
+        homePage.open();
+        LoginPage loginPage = homePage.clickFormAuthentication();
+        loginPage.setUserName("tomsmith");
+        loginPage.setPassword("SuperSecretPassword!");
+        SecureAreaPage secureAreaPage = loginPage.clickLoginButton();
+        System.out.println(secureAreaPage.getAlertText());
     }
 
 }
