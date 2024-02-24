@@ -1,12 +1,10 @@
-package com.juantesting.pages;
+package com.juantesting.pages.theinternet;
 
-import static com.juantesting.utils.Utils.sendKeys;
-import static com.juantesting.utils.Utils.clickOn;
-
+import com.juantesting.pages.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class LoginPage extends PageObject {
+public class LoginPage extends BasePage {
 
     private final By userNameField = By.id("username");
     private final By passwordField = By.id("password");
@@ -17,15 +15,15 @@ public class LoginPage extends PageObject {
     }
 
     public void setUserName(String strUserName){
-        sendKeys(getDriver(), userNameField, strUserName);
+        sendKeys(userNameField, strUserName);
     }
 
     public void setPassword(String strPassword){
-        sendKeys(getDriver(), passwordField, strPassword);
+        sendKeys(passwordField, strPassword);
     }
 
     public SecureAreaPage clickLoginButton (){
-        clickOn(getDriver(), submitButton);
+        clickOn(submitButton);
         return new SecureAreaPage(getDriver());
     }
 }

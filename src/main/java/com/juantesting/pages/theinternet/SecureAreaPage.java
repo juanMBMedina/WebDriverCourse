@@ -1,10 +1,10 @@
-package com.juantesting.pages;
+package com.juantesting.pages.theinternet;
 
-import static com.juantesting.utils.Utils.getTextFrom;
+import com.juantesting.pages.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class SecureAreaPage extends PageObject {
+public class SecureAreaPage extends BasePage {
 
     private final By statusAlert = By.id("flash");
 
@@ -13,7 +13,7 @@ public class SecureAreaPage extends PageObject {
     }
 
     public String getAlertText(){
-        return getTextFrom(getDriver(), statusAlert);
+        return getTextFrom(statusAlert);
     }
 
 }
