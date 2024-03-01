@@ -14,6 +14,7 @@ public class HomePage extends BaseHomePage {
     public HomePage(WebDriver driver) {
         super(driver);
         setStrUrl(PRINCIPAL_URL);
+        openPage();
     }
 
     public FormPage clickInForm() {

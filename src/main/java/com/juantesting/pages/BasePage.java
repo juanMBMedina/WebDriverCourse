@@ -31,6 +31,10 @@ public abstract class BasePage {
         return driver.findElement(locator).getText();
     }
 
+    public WebElement findElement(By locator){
+        return driver.findElement(locator);
+    }
+
     public void goTo(String strUrl) {
         driver.get(strUrl);
     }

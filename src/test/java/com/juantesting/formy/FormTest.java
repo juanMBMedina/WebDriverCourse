@@ -1,4 +1,4 @@
-package com.juantesting.formy.form;
+package com.juantesting.formy;
 
 import com.juantesting.BaseTest;
 import com.juantesting.pages.formy.FormPage;

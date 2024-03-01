@@ -1,4 +1,4 @@
-package com.juantesting.theinternet.login;
+package com.juantesting.theinternet;
 
 import com.juantesting.BaseTest;
 import com.juantesting.pages.theinternet.HomePage;
@@ -15,7 +15,6 @@ public class LoginTest extends BaseTest {
     @Test
     public void testSuccessfulLogin() {
         homePage = new HomePage(getDriver());
-        homePage.openPage();
         LoginPage loginPage = homePage.clickFormAuthentication();
         loginPage.setUserName("tomsmith");
         loginPage.setPassword("SuperSecretPassword!");
