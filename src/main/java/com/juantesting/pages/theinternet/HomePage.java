@@ -10,6 +10,7 @@ public class HomePage extends BaseHomePage {
     private final By formAuthenticationLink = By.linkText("Form Authentication");
     private final By dropDownLink = By.linkText("Dropdown");
     private final By forgotPasswordLink = By.linkText("Forgot Password");
+    private final By hoversLink = By.linkText("Hovers");
 
     protected final String PRINCIPAL_URL = "https://the-internet.herokuapp.com/";
 
@@ -34,4 +35,8 @@ public class HomePage extends BaseHomePage {
         return new ForgotPassPage(getDriver());
     }
 
+    public HoversPage clickOnHovers(){
+        clickOn(hoversLink);
+        return new HoversPage(getDriver());
+    }
 }
