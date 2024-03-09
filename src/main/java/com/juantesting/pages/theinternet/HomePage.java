@@ -12,6 +12,8 @@ public class HomePage extends BaseHomePage {
     private final By forgotPasswordLink = By.linkText("Forgot Password");
     private final By hoversLink = By.linkText("Hovers");
 
+    private final By keyPressesLink = By.linkText("Key Presses");
+
     protected final String PRINCIPAL_URL = "https://the-internet.herokuapp.com/";
 
     public HomePage(WebDriver driver) {
@@ -38,5 +40,10 @@ public class HomePage extends BaseHomePage {
     public HoversPage clickOnHovers(){
         clickOn(hoversLink);
         return new HoversPage(getDriver());
+    }
+
+    public KeyPressPage clickOnKeyPress(){
+        clickOn(keyPressesLink);
+        return new KeyPressPage(getDriver());
     }
 }
