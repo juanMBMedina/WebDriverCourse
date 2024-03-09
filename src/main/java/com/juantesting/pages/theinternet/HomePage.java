@@ -14,6 +14,10 @@ public class HomePage extends BaseHomePage {
 
     private final By keyPressesLink = By.linkText("Key Presses");
 
+    private final By horizontalSliderLink = By.linkText("Horizontal Slider");
+
+    private final By alertsLink = By.linkText("JavaScript Alerts");
+
     protected final String PRINCIPAL_URL = "https://the-internet.herokuapp.com/";
 
     public HomePage(WebDriver driver) {
@@ -45,5 +49,15 @@ public class HomePage extends BaseHomePage {
     public KeyPressPage clickOnKeyPress(){
         clickOn(keyPressesLink);
         return new KeyPressPage(getDriver());
+    }
+
+    public HorizontalSliderPage clickOnHorizontalSlider(){
+        clickOn(horizontalSliderLink);
+        return new HorizontalSliderPage(getDriver());
+    }
+
+    public AlertPage clickOnAlertsJS(){
+        clickOn(alertsLink);
+        return new AlertPage(getDriver());
     }
 }
