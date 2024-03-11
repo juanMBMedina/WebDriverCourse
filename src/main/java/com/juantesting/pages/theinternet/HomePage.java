@@ -7,18 +7,15 @@ import org.openqa.selenium.WebDriver;
 
 public class HomePage extends BaseHomePage {
 
+    protected final String PRINCIPAL_URL = "https://the-internet.herokuapp.com/";
     private final By formAuthenticationLink = By.linkText("Form Authentication");
     private final By dropDownLink = By.linkText("Dropdown");
     private final By forgotPasswordLink = By.linkText("Forgot Password");
     private final By hoversLink = By.linkText("Hovers");
-
     private final By keyPressesLink = By.linkText("Key Presses");
-
     private final By horizontalSliderLink = By.linkText("Horizontal Slider");
-
     private final By alertsLink = By.linkText("JavaScript Alerts");
-
-    protected final String PRINCIPAL_URL = "https://the-internet.herokuapp.com/";
+    private final By fileUploadLink = By.linkText("File Upload");
 
     public HomePage(WebDriver driver) {
         super(driver);
@@ -31,33 +28,38 @@ public class HomePage extends BaseHomePage {
         return new LoginPage(getDriver());
     }
 
-    public DropDownPage clickDropDown(){
+    public DropDownPage clickDropDown() {
         clickOn(dropDownLink);
         return new DropDownPage(getDriver());
     }
 
-    public ForgotPassPage clickForgotPass(){
+    public ForgotPassPage clickForgotPass() {
         clickOn(forgotPasswordLink);
         return new ForgotPassPage(getDriver());
     }
 
-    public HoversPage clickOnHovers(){
+    public HoversPage clickOnHovers() {
         clickOn(hoversLink);
         return new HoversPage(getDriver());
     }
 
-    public KeyPressPage clickOnKeyPress(){
+    public KeyPressPage clickOnKeyPress() {
         clickOn(keyPressesLink);
         return new KeyPressPage(getDriver());
     }
 
-    public HorizontalSliderPage clickOnHorizontalSlider(){
+    public HorizontalSliderPage clickOnHorizontalSlider() {
         clickOn(horizontalSliderLink);
         return new HorizontalSliderPage(getDriver());
     }
 
-    public AlertPage clickOnAlertsJS(){
+    public AlertPage clickOnAlertsJS() {
         clickOn(alertsLink);
         return new AlertPage(getDriver());
+    }
+
+    public UploadFilePage clickOnFileUpload(){
+        clickOn(fileUploadLink);
+        return new UploadFilePage(getDriver());
     }
 }
