@@ -3,6 +3,12 @@ package com.juantesting.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
+
+import static com.juantesting.constants.Constants.TIME_WAIT_SECONDS;
 
 public abstract class BasePage {
 
@@ -22,6 +28,10 @@ public abstract class BasePage {
 
     public void sendKeys(By locator, String srtText) {
         driver.findElement(locator).sendKeys(srtText);
+    }
+
+    public Wait<WebDriver> getWait(Integer timeInSeconds){
+        return new WebDriverWait(getDriver(), Duration.ofSeconds(timeInSeconds));
     }
 
     public String getTextFrom(By locator) {

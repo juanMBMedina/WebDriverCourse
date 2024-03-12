@@ -5,6 +5,10 @@ import com.juantesting.pages.BaseHomePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import java.util.concurrent.TimeUnit;
+
+import static com.juantesting.constants.Constants.TIME_OUT_MILLISECONDS;
+
 public class HomePage extends BaseHomePage {
 
     protected final String PRINCIPAL_URL = "https://the-internet.herokuapp.com/";
@@ -16,6 +20,7 @@ public class HomePage extends BaseHomePage {
     private final By horizontalSliderLink = By.linkText("Horizontal Slider");
     private final By alertsLink = By.linkText("JavaScript Alerts");
     private final By fileUploadLink = By.linkText("File Upload");
+    private final By entryAdLink = By.linkText("Entry Ad");
 
     public HomePage(WebDriver driver) {
         super(driver);
@@ -58,8 +63,13 @@ public class HomePage extends BaseHomePage {
         return new AlertPage(getDriver());
     }
 
-    public UploadFilePage clickOnFileUpload(){
+    public UploadFilePage clickOnFileUpload() {
         clickOn(fileUploadLink);
         return new UploadFilePage(getDriver());
+    }
+
+    public EntryAdPage clickOnEntryAd(){
+        clickOn(entryAdLink);
+        return new EntryAdPage(getDriver());
     }
 }
