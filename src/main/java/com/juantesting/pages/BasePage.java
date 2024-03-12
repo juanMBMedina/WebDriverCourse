@@ -3,6 +3,7 @@ package com.juantesting.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -64,6 +65,11 @@ public abstract class BasePage {
 
     public String getTextOfAlert() {
         return getDriver().switchTo().alert().getText();
+    }
+
+    public void rightClickOn(By locator){
+        Actions actions = new Actions(getDriver());
+        actions.contextClick(findElement(locator)).perform();
     }
 
 }
