@@ -18,6 +18,7 @@ public class HomePage extends BaseHomePage {
     private final By fileUploadLink = By.linkText("File Upload");
     private final By entryAdLink = By.linkText("Entry Ad");
     private final By contextMenuLink = By.linkText("Context Menu");
+    private final By framMenuLink = By.linkText("WYSIWYG Editor");
 
     public HomePage(WebDriver driver) {
         super(driver);
@@ -73,5 +74,10 @@ public class HomePage extends BaseHomePage {
     public ContextMenuPage clickOnContextMenu() {
         clickOn(contextMenuLink);
         return new ContextMenuPage(getDriver());
+    }
+
+    public WysiwygEditorPage clickOnFrameMenu(){
+        clickOn(framMenuLink);
+        return new WysiwygEditorPage(getDriver());
     }
 }
