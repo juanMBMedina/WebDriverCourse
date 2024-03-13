@@ -1,4 +1,4 @@
-package com.juantesting.pages.theinternet;
+package com.juantesting.pages.theinternet.keypress;
 
 
 import com.juantesting.pages.BasePage;

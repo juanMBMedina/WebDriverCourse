@@ -1,7 +1,20 @@
-package com.juantesting.pages.theinternet;
+package com.juantesting.pages.theinternet.home;
 
 
 import com.juantesting.pages.BaseHomePage;
+import com.juantesting.pages.theinternet.alerts.AlertPage;
+import com.juantesting.pages.theinternet.contextmenu.ContextMenuPage;
+import com.juantesting.pages.theinternet.dorpdown.DropDownPage;
+import com.juantesting.pages.theinternet.entry.EntryAdPage;
+import com.juantesting.pages.theinternet.forgot.ForgotPassPage;
+import com.juantesting.pages.theinternet.frames.NestedFramesPage;
+import com.juantesting.pages.theinternet.frames.WysiwygEditorPage;
+import com.juantesting.pages.theinternet.horizontalslider.HorizontalSliderPage;
+import com.juantesting.pages.theinternet.hovers.HoversPage;
+import com.juantesting.pages.theinternet.keypress.KeyPressPage;
+import com.juantesting.pages.theinternet.dynamic.DynamicLoadingPage;
+import com.juantesting.pages.theinternet.login.LoginPage;
+import com.juantesting.pages.theinternet.uploadfile.UploadFilePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -19,7 +32,8 @@ public class HomePage extends BaseHomePage {
     private final By entryAdLink = By.linkText("Entry Ad");
     private final By contextMenuLink = By.linkText("Context Menu");
     private final By frameMenuLink = By.linkText("WYSIWYG Editor");
-    private final By nestedFrames = By.linkText("Nested Frames");
+    private final By nestedFramesLink = By.linkText("Nested Frames");
+    private final By dynamicLoadingLink = By.linkText("Dynamic Loading");
 
 
     public HomePage(WebDriver driver) {
@@ -84,7 +98,12 @@ public class HomePage extends BaseHomePage {
     }
 
     public NestedFramesPage clickOnFramesNested() {
-        clickOn(nestedFrames);
+        clickOn(nestedFramesLink);
         return new NestedFramesPage(getDriver());
+    }
+
+    public DynamicLoadingPage clickOnDynamicLoad() {
+        clickOn(dynamicLoadingLink);
+        return new DynamicLoadingPage(getDriver());
     }
 }

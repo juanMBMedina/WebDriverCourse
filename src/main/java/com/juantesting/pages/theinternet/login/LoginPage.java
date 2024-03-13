@@ -1,6 +1,7 @@
-package com.juantesting.pages.theinternet;
+package com.juantesting.pages.theinternet.login;
 
 import com.juantesting.pages.BasePage;
+import com.juantesting.pages.theinternet.secure.SecureAreaPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 

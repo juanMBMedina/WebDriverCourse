@@ -1,8 +1,8 @@
 package com.juantesting.theinternet;
 
 import com.juantesting.BaseTest;
-import com.juantesting.pages.theinternet.HomePage;
-import com.juantesting.pages.theinternet.UploadFilePage;
+import com.juantesting.pages.theinternet.home.HomePage;
+import com.juantesting.pages.theinternet.uploadfile.UploadFilePage;
 import org.testng.annotations.Test;
 
 import java.io.File;

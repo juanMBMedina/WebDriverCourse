@@ -1,8 +1,8 @@
 package com.juantesting.theinternet;
 
 import com.juantesting.BaseTest;
-import com.juantesting.pages.theinternet.AlertPage;
-import com.juantesting.pages.theinternet.HomePage;
+import com.juantesting.pages.theinternet.alerts.AlertPage;
+import com.juantesting.pages.theinternet.home.HomePage;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;

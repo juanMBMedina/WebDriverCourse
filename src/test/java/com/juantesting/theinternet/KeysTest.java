@@ -1,8 +1,8 @@
 package com.juantesting.theinternet;
 
 import com.juantesting.BaseTest;
-import com.juantesting.pages.theinternet.HomePage;
-import com.juantesting.pages.theinternet.KeyPressPage;
+import com.juantesting.pages.theinternet.home.HomePage;
+import com.juantesting.pages.theinternet.keypress.KeyPressPage;
 import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
 
