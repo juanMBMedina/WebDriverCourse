@@ -1,9 +1,9 @@
 package com.juantesting.theinternet;
 
 import com.juantesting.BaseTest;
-import com.juantesting.pages.theinternet.HomePage;
-import com.juantesting.pages.theinternet.LoginPage;
-import com.juantesting.pages.theinternet.SecureAreaPage;
+import com.juantesting.pages.theinternet.home.HomePage;
+import com.juantesting.pages.theinternet.login.LoginPage;
+import com.juantesting.pages.theinternet.secure.SecureAreaPage;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertTrue;

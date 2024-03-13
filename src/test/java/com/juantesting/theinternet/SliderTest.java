@@ -1,8 +1,8 @@
 package com.juantesting.theinternet;
 
 import com.juantesting.BaseTest;
-import com.juantesting.pages.theinternet.HomePage;
-import com.juantesting.pages.theinternet.HorizontalSliderPage;
+import com.juantesting.pages.theinternet.home.HomePage;
+import com.juantesting.pages.theinternet.horizontalslider.HorizontalSliderPage;
 import org.testng.annotations.Test;
 
 import static org.testng.AssertJUnit.assertEquals;

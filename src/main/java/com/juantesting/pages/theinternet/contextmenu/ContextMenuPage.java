@@ -1,4 +1,4 @@
-package com.juantesting.pages.theinternet;
+package com.juantesting.pages.theinternet.contextmenu;
 
 import com.juantesting.pages.BasePage;
 import org.openqa.selenium.By;
